@@ -1,0 +1,452 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-color: #057fb365;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.432), #057fb365), url(http://getwallpapers.com/wallpaper/full/e/b/8/284791.jpg)
+}
+
+.mainForm {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.countQuestionScore {
+    visibility: hidden;
+    position: relative;
+    float: right;
+    width: 60px;
+    height: 60px;
+    color: white;
+    margin: 25px;
+    top: 25px;
+    right: 0px;
+}
+
+
+/* Start Page Css */
+
+.buttonBox {
+    background-color: #21BCFF;
+    box-shadow: 4px 12px rgba(255, 255, 255, 0.041);
+    height: 700px;
+    width: 700px;
+    border-radius: 35px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#startImg {
+    background-image: url("https://t3.ftcdn.net/jpg/01/63/76/32/240_F_163763250_B4zaEL6ntCWJS6o4wXkBwwBCKlY628l3.jpg");
+    width: 250px;
+    height: 250px;
+    border-radius: 35px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+
+.mainForm {
+    margin-top: 5%;
+    margin-bottom: auto;
+}
+
+#startButton {
+    display: block;
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    color: white;
+    background-color: #057FB3;
+    width: 125px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+    #startButton:hover {
+        background-color: #FF3B5B;
+    }
+
+
+h1 {
+    position: relative;
+    display: block;
+    color: white;
+    font-weight: 10px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 38px;
+    letter-spacing: 1px;
+    top: 60px;
+}
+/*tablet*/
+@media screen and (max-width: 765px) {
+    .buttonBox {
+        width: 300px;
+        height: 300px;
+    }
+
+    #startImg {
+        width: 0px;
+        height: 0px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #startButton {
+        width: 80px;
+        height: 20px;
+    }
+}
+/*mobile*/
+@media screen and (max-width: 450px) {
+    .buttonBox {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+
+    #startImg {
+        width: 0px;
+        height: 0px;
+    }
+
+    h1 {
+        font-size: 12px;
+        left: 20px;
+    }
+
+    #startButton {
+        width: 80px;
+        height: 20px;
+        top: 25px;
+    }
+}
+
+/*  Questions and answers */
+
+
+
+.questionBox {
+    background-color: rgba(128, 140, 232, 0.452);
+    font-size: 30px;
+    color: white;
+    height: 200px;
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 35px;
+    border-top: solid 5px #21BCFF;
+    border-left: solid 5px #21BCFF;
+    border-right: solid 5px #21BCFF;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.answerForm {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questionAnswer {
+    margin: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    height: 20px;
+    width: 20px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    list-style: inherit;
+}
+
+    .questionAnswer:hover {
+        background-color: #FF3B5B;
+    }
+
+    .questionAnswer:checked {
+        background-color: #ff3b3b;
+    }
+
+.fieldsetQuestion {
+    display: inline-block;
+}
+
+    .fieldsetQuestion label {
+        color: black;
+        font-size: 22px;
+        display: block;
+    }
+
+.answer {
+    position: relative;
+    border: black 2px;
+    background-color: rgba(128, 182, 232, 0.685);
+    width: 700px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 35px;
+    border-bottom: solid 5px #21BCFF;
+    border-left: solid 5px #21BCFF;
+    border-right: solid 5px #21BCFF;
+    font-family: 'Dosis', sans-serif;
+    text-align: left;
+}
+
+#nextButton {
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 12px;
+    border-radius: 50px;
+    background-color: #8CEDFF;
+    color: black;
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+    display: none;
+}
+
+    #nextButton:hover {
+        background-color: #FF3B5B;
+    }
+/*tablet*/
+@media screen and (max-width: 768px) {
+    .questionBox {
+        height: 180px;
+        width: 380px;
+        font-size: 20px;
+        top: 50px;
+    }
+
+    .answer {
+        width: 500px;
+        height: 200px;
+        top: 50px;
+    }
+
+    .fieldsetQuestion label {
+        font-size: 14px;
+    }
+
+    .countQuestionScore li {
+        font-size: 14px;
+    }
+
+    #nextButton {
+        margin-top: 70px;
+    }
+}
+/*mobile*/
+@media screen and (max-width: 450px) {
+    .questionBox {
+        height: 160px;
+        width: 380px;
+        font-size: 18px;
+        top: 50px;
+    }
+
+    .answer {
+        width: 500px;
+        height: 200px;
+        top: 50px;
+    }
+
+    .fieldsetQuestion label {
+        font-size: 14px;
+    }
+
+    .countQuestionScore li {
+        font-size: 14px;
+    }
+
+    #nextButton {
+        margin-top: 70px;
+    }
+}
+
+
+
+/* Feedback Page Css */
+
+#feedbackHead h1 {
+    z-index: 1;
+    font-size: 28px;
+    text-align: center;
+    top: 20px;
+}
+
+#feedbackHead h2 {
+    z-index: 1;
+    font-size: 20px;
+    color: whitesmoke;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 200px;
+    left: auto;
+    right: auto;
+    margin: 10px;
+}
+
+
+.feedbackBoxBottom {
+    position: relative;
+    background-color: rgb(61, 61, 61);
+    width: 450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    border-radius: 35px;
+}
+
+#feedbackButton {
+    position: relative;
+    margin-top: 10px;
+    font: bold;
+    color: black;
+    background-color: white;
+    bottom: 0;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    left: 40%;
+}
+
+    #feedbackButton:hover {
+        background-color: #FF3B5B;
+    }
+
+.wrongImg {
+    background-image: url("https://media3.giphy.com/media/l4FGxh9oeMtEeSFJ6/giphy.gif?cid=790b7611a26ff82815975d53ea56a10ccf06d8a4a5e29eb9&rid=giphy.gif");
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    z-index: 1;
+    border-radius: 35px;
+}
+
+.correctImg {
+    background-image: url("https://media1.giphy.com/media/3o7ZeyygEX8VRKC1I4/giphy.gif?cid=790b76114b9758da247afd8f0b8a85b9d927956032f7efdd&rid=giphy.gif");
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    z-index: 1;
+    border-radius: 35px;
+}
+
+.feedbackSect {
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .correctImg {
+        width: 400px;
+        height: 280px;
+    }
+
+    .wrongImg {
+        width: 400px;
+        height: 280px;
+    }
+
+    .feedbackBoxBottom {
+        width: 400px;
+        height: 280px;
+    }
+}
+
+
+
+
+
+/* results Page */
+
+.resultsBox {
+    position: relative;
+    height: 550px;
+    width: 380px;
+    border-radius: 2%;
+    background-color: rgb(47, 248, 255);
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+}
+
+#headerScore h1 {
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
+
+.resultText {
+    z-index: 1;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 40%;
+}
+
+    .resultText h2 {
+        margin-bottom: 15px;
+    }
+
+#restartButton {
+    position: absolute;
+    bottom: 0%;
+    background-color: #057FB3;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    left: 40%;
+    margin-bottom: 12px;
+}
+
+    #restartButton:hover {
+        background-color: #FF3B5B;
+    }
+
+.scoreImg {
+    background-image: url("https://media.giphy.com/media/SiEJuFiOrNHeRjYmUy/giphy.gif");
+    text-align: center;
+    padding-top: 50%;
+}
+
+ul li {
+    list-style: none;
+    float: right;
+    display: flex;
+    margin-right: 5px;
+    font-size: 19px;
+}
+
+.countQuestionScore {
+    list-style: none;
+    position: absolute;
+    top: 0px;
+    margin-left: 45px;
+    margin-right: 0px;
+}

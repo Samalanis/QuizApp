@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fishing Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="countQuestionScore">
+        <ul>
+            <li>Question: <span class="questionNumber"> 0 </span> /6 </li>
+            <li>
+                Score: <span class="score"> 0 </span> /6
+            </li>
+        </ul>
+    </div>
+    <form class="mainForm">
+        <div class="buttonBox">
+            <h1>How much do you know about fishing?</h1>
+            <div id="startImg"></div>
+            <button id="startButton">Start</button>
+        </div>
+    </form>
+    <div class="feedbackSect"></div>
+    <button type="submit" id="nextButton" value="submit"> Next </button>
+    <div class="resultsDiv"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
