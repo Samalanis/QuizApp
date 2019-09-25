@@ -192,7 +192,7 @@ h1 {
     }
 
 .fieldsetQuestion {
-    display: inline-block;
+    display: block;
 }
 
     .fieldsetQuestion label {

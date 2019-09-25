@@ -124,35 +124,38 @@ function joinDoc() {
 function renderForm() {
     console.log('renderForm is running');
     if (questionCounter < STORE.length) {
-        return `<header>
+        return `
   <div class="questionDiv"></div>
   <div class="scoreDiv"></div>
-  </header>
-  <form  id="formHandle">
+
+  <form id="formHandle">
     
-    <div class="questionBox">${STORE[questionCounter].question}</div>
+
+  <fieldset class="fieldsetQuestion" role="radiogroup">
+
+    <legend class="questionBox">${STORE[questionCounter].question}</legend>
 
     <div class="answer">
-
-    <fieldset class="fieldsetQuestion">
-      <label for="${STORE[questionCounter].answers[0]}">
-      <input type="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[0]}">
+    
+      <label for="answerOne">
+      <input type="radio" id="answerOne" role="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[0]}">
          ${STORE[questionCounter].answers[0]}
       </label>
           
-      <label for="${STORE[questionCounter].answers[1]}">
-        <input type="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[1]}">
+      <label for="answerTwo">
+        <input type="radio" id="answerTwo" role="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[1]}">
          ${STORE[questionCounter].answers[1]}
       </label>
 
-      <label for="${STORE[questionCounter].answers[2]}">
-        <input type="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[2]}">
-         ${STORE[questionCounter].answers[2]}</label>
+      <label for="answerThree">
+        <input type="radio" role="radio" id="answerThree" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[2]}">
+         ${STORE[questionCounter].answers[2]}
       </label>
 
-      <label for="${STORE[questionCounter].answers[3]}">
-        <input type="radio" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[3]}">
+      <label for="answerFour">
+        <input type="radio" role="radio" id="answerFour" class="questionAnswer" name="answers" value="${STORE[questionCounter].answers[3]}">
          ${STORE[questionCounter].answers[3]}
+
       </label>
       </div>
     </fieldset>
@@ -223,11 +226,13 @@ function pickAnswer() {
 
 //this is to show the feedback as wrong if they did not get it correct
 function wrongAnswer() {
+    let answerPositon = STORE[questionCounter].correctAnswer;
     console.log('wrongAnswer is running');
     $('#nextButton').hide();
     //$('.feedbackSect').toggle();
     $('.feedbackSect').html(`<header id="feedbackHead">
     <h1>Wrong!</h1>
+    <h2>The correct answer was ${answerPositon}.</h2> 
     <h2>Don't be salty there is always next time!</h2>
     </header>
     <div class="feedbackBoxBottom">
